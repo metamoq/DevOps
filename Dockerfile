@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-
+FROM node:18-alpine
 # Comments are provided throughout this file to help you get started.
 # If you need more help, visit the Dockerfile reference guide at
 # https://docs.docker.com/go/dockerfile-reference/
@@ -60,3 +60,4 @@ COPY --from=build /bin/hello.sh /bin/
 
 # What the container should run when it is started.
 ENTRYPOINT [ "/bin/hello.sh" ]
+RUN mkdir -p/app
